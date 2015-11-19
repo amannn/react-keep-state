@@ -1,0 +1,39 @@
+{
+  "name": "react-keep-state",
+  "version": "0.0.1",
+  "description": "My attempt to find a good way to make sure that a React component will keep it's state, even if it's unmounted.",
+  "main": "src/keepStateHOC",
+  "scripts": {
+    "test": "rimraf __bundled_tests__ && npm run test:jest",
+    "test:watch": "nodemon -w ./src -e js -x npm run test",
+    "test:jest": "webpack --config webpack.config.js --bail && jest"
+  },
+  "engines": {
+    "node": ">=5"
+  },
+  "author": "Jan Amann <jan@amann.me>",
+  "license": "MIT",
+  "jest": {
+    "moduleLoader": "<rootDir>/node_modules/jestpack/ModuleLoader",
+    "testPathDirs": [
+      "<rootDir>/__bundled_tests__"
+    ],
+    "verbose": true
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "babel-runtime": "^6.1.18",
+    "glob": "^5.0.14",
+    "jest-cli": "^0.7",
+    "jestpack": "^0.2.0",
+    "nodemon": "^1.8.1",
+    "react": "^0.13.3",
+    "stats-webpack-plugin": "^0.2.1",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.12.1"
+  },
+  "dependencies": {
+    "react": "^0.13.3"
+  }
+}
