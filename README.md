@@ -72,6 +72,7 @@ What's good:
  - It still uses the regular React syntax (`this.state` and `this.setState`) – no magic there.
  - No performance problems.
  - Only 3 lines you have to remember, therefore I think a library / higher order component / decorator is not worth it.
+ - It isn't dependant on some logic in a parent component.
 
 What's not so good:
  - This only works if the component is only used once within an app. But that is suitable for most [smart components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0) (i.e. route handlers). Personally so far I didn't ran into a problem, where i wanted a reusable component to keep it's state between unmounts. If you have such a scenario, I'd suggest making it dependent on the state of a parent smart component, which could use the shown pattern.
@@ -82,7 +83,7 @@ If it's necessary to produce the internal state directly from props, this can be
 import React, { Component, PropTypes } from 'react';
 
 // Set initial state
-let state = {somePrivateState: 'initial'};
+let state = { somePrivateState: 'initial' };
 
 class Counter extends Component {
 
