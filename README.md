@@ -190,7 +190,7 @@ What's not so good:
 
 This could also be implemented with a decorator:
 ```js
-@keepState({counter: 0})
+@keepState({ counter: 0 })
 class Counter extends Component {
   ...
 }
@@ -199,7 +199,7 @@ I really like that syntax, but a change in how you interact with the state is no
 
 For the usecase of generating state from props this is a lot cleaner then the example without the HOC:
 ```js
-@keepState(props => { return { currentCounter: props.initialCounter } } )
+@keepState(props => ({ currentCounter: props.initialCounter }))
 class Counter extends Component {
   ...
 }
