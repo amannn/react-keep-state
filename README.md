@@ -1,5 +1,7 @@
 # react-keep-state
 
+> **NOTE:** I've experimented with this a long time ago and this repository doesn't reflect my current opinion anymore. Here are some better alternatives: https://stackoverflow.com/a/33800398/343045.
+
 This repository represents my attempt to find a good way to make sure that a React component will keep it's state, even if it's unmounted.
 
 ## Motivation
