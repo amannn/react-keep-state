@@ -2,6 +2,9 @@
 
 > **NOTE:** I've experimented with this a long time ago and this repository doesn't reflect my current opinion anymore. Here are some better alternatives: https://stackoverflow.com/a/33800398/343045.
 
+<details>
+  <summary>Previous discussion</summary>
+
 This repository represents my attempt to find a good way to make sure that a React component will keep it's state, even if it's unmounted.
 
 ## Motivation
@@ -211,3 +214,5 @@ class Counter extends Component {
 The examples shown above are all tested. If you want to run the tests or experiment with something, you can do the following:
  - `npm install`
  - `npm run test` or `npm run test:watch`
+
+</details>
